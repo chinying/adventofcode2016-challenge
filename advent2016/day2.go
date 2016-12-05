@@ -41,3 +41,40 @@ func Day2a() {
     fmt.Printf("%v", a)
   }
 }
+
+func Day2b() {
+  pad := []byte{' ', ' ', ' ', ' ', ' ', ' ', ' '}
+  r0 := []byte{' ', ' ', ' ', '1', ' ', ' ', ' '}
+  r1 := []byte{' ', ' ', '2', '3', '4', ' ', ' '}
+  r2 := []byte{' ', '5', '6', '7', '8', '9', ' '}
+  r3 := []byte{' ', ' ', 'A', 'B', 'C', ' ', ' '}
+  r4 := []byte{' ', ' ', ' ', 'D', ' ', ' ', ' '}
+  keypad := [][]byte{pad, r0, r1, r2, r3, r4, pad}
+  x, y := 1, 3 // coords of 5
+  ans := make([]byte, 0)
+  for _, c := range(d2input) {
+    switch c {
+      case 'L':
+        if keypad[y][x-1] != ' ' {
+          x -= 1
+        }
+      case 'R':
+        if keypad[y][x+1] != ' ' {
+          x += 1
+        }
+      case 'D':
+        if keypad[y+1][x] != ' ' {
+          y += 1
+        }
+      case 'U':
+        if keypad[y-1][x] != ' ' {
+          y -= 1
+        }
+      case '\n':
+        ans = append(ans, keypad[y][x])
+    }
+  }
+  ans = append(ans, keypad[y][x]) // last number not being printed
+  s := string(ans[:])
+  fmt.Println(s)
+}
