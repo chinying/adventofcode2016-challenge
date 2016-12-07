@@ -13,6 +13,8 @@ func main() {
   advent2016.Day4b()
   advent2016.Day5a()
   advent2016.Day5b()
-  advent2016.Day6a()*/
+  advent2016.Day6a()
   advent2016.Day6b()
+  advent2016.Day7a()*/
+  advent2016.Day7b()
 }
