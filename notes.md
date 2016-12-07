@@ -1,1 +1,10 @@
-day 1b have to calculate offset from collision coordinates
+sort of a TIL area / for personal notes  
+- day 1b have to calculate offset from collision coordinates  
+- I suspect the getBearing function used for day 1 can be further reduced / mathed, but I'll work that out on another day  
+- as per discussion with my friend, another way to solve day 1b will be probably exploiting the fact that the lines can only intersect in so many ways since it's only horizontal / vertical. for the general case of line intersection apparently line sweep is the way to go.  
+- I know there are linear algebra / matrices libraries out there for golang, [this](https://github.com/gonum/matrix) actually seems like a pretty decent one, but I'm trying to stick to the standard library if possible.  
+- in a package, if a function is defined somewhere, even when uncapitalized, it cannot be defined elsewhere in the package, it just isn't being exported for public(??) use   
+- so strconv.FormatInt(i, 10) is used for converting int64 since strconv.Atoi only works on int types  
+- apparently variables in structs have to be capitalized or they won't be exported  
+- yes I'm aware that my DRY (+ SE in general) principles here are horrible, that's what happens when you try to write in semi comp prog form  
+- you used regular expressions: now you have 2 problems. day 7 was tricky because I did a regex replace of anything between square brackets, but did not consider that I'm effectively concatenating the 2 ends in between, introducing some false positives  
