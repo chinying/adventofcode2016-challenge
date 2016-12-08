@@ -8,3 +8,5 @@ sort of a TIL area / for personal notes
 - apparently variables in structs have to be capitalized or they won't be exported  
 - yes I'm aware that my DRY (+ SE in general) principles here are horrible, that's what happens when you try to write in semi comp prog form  
 - you used regular expressions: now you have 2 problems. day 7 was tricky because I did a regex replace of anything between square brackets, but did not consider that I'm effectively concatenating the 2 ends in between, introducing some false positives  
+- probably is a better array rotation algorithm around, if I did more leetcode etc I may actually know one  
+- day 8 was a nightmare because I kept mixing up my variables for rows and cols
