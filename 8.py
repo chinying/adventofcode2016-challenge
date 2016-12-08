@@ -23,6 +23,10 @@ def main():
                 grid[:,idx] = np.roll(grid[:,idx], by)
 
     print(sum(sum(grid)))
+    for i in range(height):
+        for j in range(width):
+            print('*' if grid[i][j] else ' ', end="")
+        print()
     # parr(grid)
 def parr(arr):
     for l in arr:
