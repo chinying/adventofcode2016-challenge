@@ -9,4 +9,9 @@ sort of a TIL area / for personal notes
 - yes I'm aware that my DRY (+ SE in general) principles here are horrible, that's what happens when you try to write in semi comp prog form  
 - you used regular expressions: now you have 2 problems. day 7 was tricky because I did a regex replace of anything between square brackets, but did not consider that I'm effectively concatenating the 2 ends in between, introducing some false positives  
 - probably is a better array rotation algorithm around, if I did more leetcode etc I may actually know one  
-- day 8 was a nightmare because I kept mixing up my variables for rows and cols
+- day 8 was a nightmare because I kept mixing up my variables for rows and cols  
+- My answer for 9b really should have been wrong due to integer overflow but somehow golang has a way of circumventing that.  
+- Day 10 is clearly a graph problem  
+- I used bash for day 10. ```grep -o "bot [0-9]\+" 10.txt | awk '{print $2}' | sort -nr | head -n 1```
+- Day 10 : need concept of active bots (ie. those that currently hold 2). this can either be done by iterating through entire graph at each epoch, or maintaining a set somehow  
+- Days 10 - 12 remind me of registers  
