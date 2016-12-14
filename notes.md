@@ -14,4 +14,5 @@ sort of a TIL area / for personal notes
 - Day 10 is clearly a graph problem  
 - I used bash for day 10. ```grep -o "bot [0-9]\+" 10.txt | awk '{print $2}' | sort -nr | head -n 1```
 - Day 10 : need concept of active bots (ie. those that currently hold 2). this can either be done by iterating through entire graph at each epoch, or maintaining a set somehow  
-- Days 10 - 12 remind me of registers  
+- Days 10 & 12 remind me of registers  
+- Day 11 is another graph problem (or at least can be modelled as so), specifically some variation of a river crossing puzzle. Also possibly may be solved via DP.  
