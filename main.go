@@ -19,6 +19,7 @@ func main() {
   advent2016.Day7b()
   advent2016.Day8()
   advent2016.Day9a()
-  advent2016.Day9b()*/
-  advent2016.Day10()
+  advent2016.Day9b()
+  advent2016.Day10()*/
+  advent2016.Day12()
 }
