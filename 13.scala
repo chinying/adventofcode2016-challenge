@@ -27,7 +27,6 @@ object Day13 {
     var prev = new HashMap[Coordinate, Coordinate]
     q += src
     while (!q.isEmpty) {
-      //at neighbours phase must check for both wall and boundaries, visited
       val front = q.dequeue
       val neighbours = front.neighbours(width, height).filter(n => {
         !grid(n.y)(n.x) && !visited(n) // not wall + not visited
@@ -46,6 +45,27 @@ object Day13 {
       path += current
     }
     println(path.length)
+  }
+
+  def floodfill(src : Coordinate, depth: Int, grid : Array[Array[Boolean]]) {
+    val height = grid.length
+    val width = grid.head.length
+    var visited = new HashSet[Coordinate]
+    var q = new Queue[Coordinate]
+    var dist = new HashMap[Coordinate, Int]
+    dist += (src -> 0)
+    q += src
+    while (!q.isEmpty) {
+      val front = q.dequeue
+      val neighbours = front.neighbours(width, height).filter(n => {
+        !grid(n.y)(n.x) && !visited(n) // not wall + not visited
+      }).foreach(n => {
+        visited += n
+        q.enqueue(n)
+        dist += (n -> (dist(front) + 1))
+      })
+    }
+    println(dist.count(kv => kv._2 <= depth))
   }
 
   def hammingWeight(x : Int) : Int = {
@@ -76,5 +96,6 @@ object Day13 {
       for (i<-0 until width) grid(j)(i) = isWall(i, j)
     }
     bfs(new Coordinate(1,1), goal, grid)
+    floodfill(new Coordinate(1,1), 50, grid)
   }
 }
