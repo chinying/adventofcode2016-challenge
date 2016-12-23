@@ -9,10 +9,12 @@ sort of a TIL area / for personal notes
 - yes I'm aware that my DRY (+ SE in general) principles here are horrible, that's what happens when you try to write in semi comp prog form  
 - you used regular expressions: now you have 2 problems. day 7 was tricky because I did a regex replace of anything between square brackets, but did not consider that I'm effectively concatenating the 2 ends in between, introducing some false positives  
 - probably is a better array rotation algorithm around, if I did more leetcode etc I may actually know one  
-- day 8 was a nightmare because I kept mixing up my variables for rows and cols  
+- day 8 was a nightmare because I kept mixing up my variables for rows and cols. Random thought : maybe for such problems in future it will be easier to flatten the array and just do a (width * y + x)  
 - My answer for 9b really should have been wrong due to integer overflow but somehow golang has a way of circumventing that.  
 - Day 10 is clearly a graph problem  
 - I used bash for day 10. ```grep -o "bot [0-9]\+" 10.txt | awk '{print $2}' | sort -nr | head -n 1```
 - Day 10 : need concept of active bots (ie. those that currently hold 2). this can either be done by iterating through entire graph at each epoch, or maintaining a set somehow  
-- Days 10 & 12 remind me of registers  
 - Day 11 is another graph problem (or at least can be modelled as so), specifically some variation of a river crossing puzzle. Also possibly may be solved via DP.  
+- so for day 14 I have this solution in scala that works for part a, but takes forever to run for part b. bottleneck seems to be the 2016 * md5, so I shall see if I can hack up a solution in another language  
+- Day 15 apparently is this thing called Chinese Remainder Theorem. I knew straight up from seeing the question that some form of modular arithmetic is involved, but didn't know exactly what to do  
+- Day 20 seems like it can be done using interval trees, which I haven't written one myself yet. Also reminds me of some usaco problem from long long ago, I may revisit that in future  
